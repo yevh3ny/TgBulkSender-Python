@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>App configuration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=686449807">
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    <link href="/css/bootstrap-extra.css?2" rel="stylesheet">
+
+    <link href="/css/telegram.css?236" rel="stylesheet" media="screen">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <div class="tl_page_wrap">
+        <div class="tl_page_head navbar navbar-static-top navbar-tg">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="//telegram.org/">Home</a></li>
+                        <li><a href="//telegram.org/faq">FAQ</a></li>
+                        <li><a href="//telegram.org/apps">Apps</a></li>
+                        <li class="hidden-xs"><a href="//core.telegram.org/api">API</a></li>
+                        <li class="hidden-xs"><a href="//core.telegram.org/mtproto">Protocol</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container tl_page_container">
+            <div class="tl_page">
+                <div class="app_edit_page">
+                    <form class="form-horizontal" id="app_edit_form">
+                        <input type="hidden" name="hash" value="04ab69588a7b9780e9" />
+                        <h2>App configuration</h2>
+                        <div class="form-group">
+                            <label for="app_id" class="col-md-4 text-right control-label">App api_id:</label>
+                            <div class="col-md-7">
+                                <span class="form-control input-xlarge uneditable-input"
+                                    onclick="this.select();"><strong>28576271</strong></span>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="app_lock_tt"><span class="glyphicon glyphicon-lock"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="app_hash" class="col-md-4 text-right control-label">App api_hash:</label>
+                            <div class="col-md-7">
+                                <span class="form-control input-xlarge uneditable-input"
+                                    onclick="this.select();">bbab53780300cc97357a7068c7725062</span>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="app_lock_tt"><span class="glyphicon glyphicon-lock"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="app_title" class="col-md-4 text-right control-label">App title:</label>
+                            <div class="col-md-8">
+                                <input id="app_title" name="app_title" type="text" class="form-control input-xlarge"
+                                    value="tgbulksender" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="app_shortname" class="col-md-4 text-right control-label">Short name:</label>
+                            <div class="col-md-8">
+                                <input id="app_shortname" name="app_shortname" type="text"
+                                    class="form-control input-xlarge" value="tgbulksenderbyy3" />
+                                <p class="help-block"><span class="text-muted">alphanumeric, 5-32 characters</span></p>
+                            </div>
+                        </div>
+
+                        <div style="display: none;">
+                            <h3>PUSH-notifications settings</h3>
+
+                            <div class="form-group">
+                                <label for="app_gcm_api_key" class="col-md-4 text-right control-label">GCM API
+                                    key:</label>
+                                <div class="col-md-8">
+                                    <input id="app_gcm_api_key" name="app_gcm_api_key" type="text"
+                                        class="form-control input-xlarge" value="" />
+                                    <p class="help-block"><a
+                                            href="http://developer.android.com/google/gcm/gs.html#access-key"
+                                            target="_blank">How do I get this?</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: none;">
+                            <h3>
+                                APNS certificates
+                                <small>
+                                    &nbsp;<a href="/apps/apns_cert">Update</a>
+                                    &nbsp;<a href="/apps/apns_cert_delete"
+                                        onclick="return confirm('Are you sure to delete certificates?');"
+                                        style="display: none;">Delete</a>
+                                </small>
+                            </h3>
+
+                            <div class="form-group" style="display: none;">
+                                <label for="app_apns_production_pem" class="col-md-4 text-right control-label">APNS
+                                    production certificate:</label>
+                                <div class="col-md-8">
+                                    <span class="form-control input-xlarge uneditable-input"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="display: none;">
+                                <label for="app_apns_dev_pem" class="col-md-4 text-right control-label">APNS development
+                                    certificate:</label>
+                                <div class="col-md-8">
+                                    <span class="form-control input-xlarge uneditable-input"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Available MTProto servers</h3>
+
+                        <div class="form-group">
+                            <label class="col-md-4 text-right control-label">Test configuration:</label>
+                            <div class="col-md-8">
+                                <span
+                                    class="form-control input-xlarge uneditable-input"><strong>149.154.167.40:443</strong></span>
+                                <p class="help-block">DC 2</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 text-right control-label">Public keys:</label>
+                            <div class="col-md-8">
+                                <pre><code>-----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEAyMEdY1aR+sCR3ZSJrtztKTKqigvO/vBfqACJLZtS7QMgCGXJ6XIR
+yy7mx66W0/sOFa7/1mAZtEoIokDP3ShoqF4fVNb6XeqgQfaUHd8wJpDWHcR2OFwv
+plUUI1PLTktZ9uW2WE23b+ixNwJjJGwBDJPQEQFBE+vfmH0JP503wr5INS1poWg/
+j25sIWeYPHYeOrFp/eXaqhISP6G+q2IeTaWTXpwZj4LzXq5YOpk4bYEQ6mvRq7D1
+aHWfYmlEGepfaYR8Q0YqvvhYtMte3ITnuSJs171+GDqpdKcSwHnd6FudwGO4pcCO
+j4WcDuXc2CTHgH8gFTNhp/Y8/SpDOhvn9QIDAQAB
+-----END RSA PUBLIC KEY-----
+</code></pre>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 text-right control-label">Production configuration:</label>
+                            <div class="col-md-8">
+                                <span
+                                    class="form-control input-xlarge uneditable-input"><strong>149.154.167.50:443</strong></span>
+                                <p class="help-block">DC 2</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 text-right control-label">Public keys:</label>
+                            <div class="col-md-8">
+                                <pre><code>-----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEA6LszBcC1LGzyr992NzE0ieY+BSaOW622Aa9Bd4ZHLl+TuFQ4lo4g
+5nKaMBwK/BIb9xUfg0Q29/2mgIR6Zr9krM7HjuIcCzFvDtr+L0GQjae9H0pRB2OO
+62cECs5HKhT5DZ98K33vmWiLowc621dQuwKWSQKjWf50XYFw42h21P2KXUGyp2y/
++aEyZ+uVgLLQbRA1dEjSDZ2iGRy12Mk5gpYc397aYp438fsJoHIgJ2lgMv5h7WY9
+t6N/byY9Nw9p21Og3AoXSL2q/2IJ1WRUhebgAdGVMlV1fkuOQoEzR7EdpqtQD9Cs
+5+bfo3Nhmcyvk5ftB0WkJ9z6bNZ7yxrP8wIDAQAB
+-----END RSA PUBLIC KEY-----
+</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="button" class="btn btn-primary" data-loading-text="Saving..."
+                                    id="app_save_btn" onclick="saveApp(); return false;">Save changes</button>
+                                <a href="/" class="btn btn-link">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js?1"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js?4"></script>
+    <script>$('#app_save_btn').button();
+        $('.app_lock_tt').tooltip({ html: true, title: '<div class="app_lock_text">It is forbidden to pass this value to third parties.</div>' });
+
+        function saveApp() {
+            $('#app_save_btn').button('loading');
+
+            $.ajax({
+                type: 'POST',
+                url: '/apps/save',
+                data: $('#app_edit_form').serialize(),
+                success: function (error) {
+                    $('#app_save_btn').button('reset');
+                    if (error) {
+                        alert(error);
+                    }
+                },
+                error: function (error) {
+                    $('#app_save_btn').button('reset');
+                    if (error) {
+                        alert(error);
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
+<!-- page generated in 3ms
