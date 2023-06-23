@@ -2,3 +2,4 @@ __pycache__/
 
 user_data.db
 session.session
+app_api_key.html
